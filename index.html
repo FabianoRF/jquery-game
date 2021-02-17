@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Trabalho jquery</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <link rel="stylesheet" href="styles.css">
+      
+      <script>
+         function handleStopDrag() {
+            console.log('soltou')
+
+            handleRefreshItems()
+         }
+
+         function handleRefreshItems() {
+            const ulElement = document.getElementById("table");
+
+            console.log(ulElement)
+         }
+
+         $(function() {
+            $( "#table" ).sortable();
+         });
+
+         // $(function() {
+         //    $( "#1" ).draggable({
+         //       stop: handleStopDrag
+         //    });
+         //    $( "#2" ).draggable();
+         //    $( "#3" ).draggable();
+         //    $( "#4" ).draggable();
+         //    $( "#5" ).draggable();
+         //    $( "#6" ).draggable();
+         //    $( "#7" ).draggable();
+         //    $( "#8" ).draggable();
+         // });
+      </script>
+   </head>
+   
+   <body>
+      <main>
+         <ul id = "table">
+            <li id="1" class = "default">1</li>
+            <li id="2" class = "default">2</li>
+            <li id="3" class = "default">3</li>
+            <li id="4" class = "default">4</li>
+            <li id="5" class = "default">5</li>
+            <li id="6" class = "default">6</li>
+            <li id="7" class = "default">7</li>
+            <li id="8" class = "default">8</li>
+            <li id="vazio" class = "vazio">Vazio</li>
+         </ul>
+      </main>
+   </body>
+</html>
